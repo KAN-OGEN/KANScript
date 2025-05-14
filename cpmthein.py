@@ -12,7 +12,7 @@ class Cpmthein:
         params = { "key": self.access_key }
         response = requests.post(f"{__ENDPOINT_URL__}/account_login", params=params, data=payload)
         try:
-            response_decoded = response.json()
+            response_decoded = print("🪵 DEBUG - Respuesta del servidor:", response_decoded)
         except Exception:
             print("❌ Error: El servidor no respondió con JSON. Puede estar apagado o respondió mal.")
             print(f"Respuesta recibida:\n{response.text}")
