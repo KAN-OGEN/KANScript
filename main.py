@@ -17,8 +17,8 @@ import datetime
 
 from cpmthein import Cpmthein
 
-__CHANNEL_USERNAME__ = "CPta11"
-__GROUP_USERNAME__   = "not available"
+__CHANNEL_USERNAME__ = "X"
+__GROUP_USERNAME__   = "X"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
