@@ -1,6 +1,6 @@
 import requests
 
-__ENDPOINT_URL__: str = "https://myscript-c93g.onrender.com"
+__ENDPOINT_URL__: str = "https://myscript-c93g.onrender.com/api"
     
 class Cpmthein:
     def __init__(self, access_key) -> None:
