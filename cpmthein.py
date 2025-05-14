@@ -12,14 +12,15 @@ class Cpmthein:
         params = { "key": self.access_key }
         response = requests.post(f"{__ENDPOINT_URL__}/account_login", params=params, data=payload)
         try:
-            response_decoded = print("🪵 DEBUG - Respuesta del servidor:", response_decoded)
+            response_decoded = response.json()
         except Exception:
             print("❌ Error: El servidor no respondió con JSON. Puede estar apagado o respondió mal.")
             print(f"Respuesta recibida:\n{response.text}")
             return 999
         if response_decoded.get("ok"):
             self.auth_token = response_decoded.get("auth")
-        return response_decoded.get("error")
+            return 0  # ← login correcto
+        return response_decoded.get("error", 998)
     
     def register(self, email, password) -> int:
         payload = { "account_email": email, "account_password": password }
