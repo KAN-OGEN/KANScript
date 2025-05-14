@@ -1,6 +1,6 @@
 import requests
 
-__ENDPOINT_URL__: str = "https://cpmthein.squareweb.app/api"
+__ENDPOINT_URL__: str = "https://myscript-c93g.onrender.com"
     
 class Cpmthein:
     def __init__(self, access_key) -> None:
